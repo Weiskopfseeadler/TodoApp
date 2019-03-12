@@ -1,0 +1,44 @@
+<app-add-todo   [selectedTodo]="selectedTodo"  [showTodo]="this"  ></app-add-todo>
+
+
+<table align="center">
+
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Importance</th>
+    <th>DueDate</th>
+    <th>Operator</th>
+    <th class="delet">Del</th>
+
+  </tr>
+  </thead>
+  <tbody>
+
+
+
+  <tr  *ngFor="let todo of todoItem" [class.selected]="todo === selectedTodo"
+    (click)="onSelect(todo)">
+
+    <td>
+      {{todo.name}}
+    </td>
+    <td>
+      {{todo.importance}}
+    </td>
+
+    <td>
+      {{todo.dueDate}}
+    </td>
+
+  <td>
+    {{todo.operator}}
+  </td>
+  <td class="delet" id="myUL" (click)="deletTodo(todo.id)">
+
+    <div >X</div>
+  </td>
+
+  </tr>
+  </tbody>
+</table>

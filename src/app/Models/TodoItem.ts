@@ -1,3 +1,5 @@
+import {User} from "./user";
+
 export class todoItem {
     id:number;
     name: string;
@@ -5,7 +7,8 @@ export class todoItem {
     dueDate: Date ;
     operator:string;
 
+
     constructor(){}
 
-     
+
   }

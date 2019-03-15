@@ -8,6 +8,10 @@ import {RegisterComponent} from './register/register.component'
 
 const routes: Routes = [
   {
+    path: '',
+    component: LoginComponent
+  },
+  {
     path: 'show-todo',
     component: ShowTodoComponent
   },{
@@ -19,7 +23,7 @@ const routes: Routes = [
     component : LoginComponent
   },{
     path:'register',
-    component : RegisterComponent
+     component : RegisterComponent
   }
 
 

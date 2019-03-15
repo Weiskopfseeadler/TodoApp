@@ -5,10 +5,10 @@
   <div class="inputs">
 
   <input [(ngModel)]="selectedTodo.id"   type="hidden" name="id" #id  >
-  <input [(ngModel)]="selectedTodo.name" id="myInput"  type="text" name="name" #name  >
-  <input [(ngModel)]="selectedTodo.importance" id="myInput" type="number" #importance >
+  <input [(ngModel)]="selectedTodo.name"   type="text" name="name" #name  >
+  <input [(ngModel)]="selectedTodo.importance"  type="number" #importance >
   <input [(ngModel)]="selectedTodo.dueDate " sid="myInput" type="datetime" #dueDate>
-  <input [(ngModel)]="selectedTodo.id" ="myInput" type="text" #operator >
+  <input [(ngModel)]="selectedTodo.id" type="text" #operator >
   <button  class="addBtn" (click)= "add(name.value,importance.value,dueDate.value,operator.value)" routerLink="/show-todo"><a >add</a>  </button>
   <button routerLink="/show-todo" class="addBtn" (click)= "updateTodo(id.value,name.value,importance.value,dueDate.value,operator.value)">change</button>
 </div>

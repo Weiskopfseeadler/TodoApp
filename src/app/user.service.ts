@@ -15,7 +15,7 @@ export class UserService {
 
   public getAll() {
 
-    return this.httpClient.get<any>(this.path);
+    return this.httpClient.get<User[]>(this.path);
   }
   public addUser(newUser: User )/*Observable<UserItem>*/ {
     //console.log("Ich lade");
@@ -24,17 +24,17 @@ export class UserService {
 
   public deletUser(id:number){
 
-    return this.httpClient.delete(this.path);
+    return this.httpClient.delete<User[]>(this.path+id);
   }
 
   public updateUser(id:number,User:User){
 
-    return this.httpClient.put(this.path,User);
+    return this.httpClient.put<User>(this.path+id,User);
 
   }
   public check(User:User){
 
-    return this.httpClient.put(this.path+"/Check",User);
+    return this.httpClient.post<User>(this.path+"Check",User);
 
   }
 

@@ -4,7 +4,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShowTodoComponent } from './show-todo/show-todo.component';
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 import { RouterModule } from '@angular/router';
 import { AddTodoComponent } from './add-todo/add-todo.component';
@@ -20,7 +20,8 @@ import { RegisterComponent } from './register/register.component';
     HttpClientModule,
     AppRoutingModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   declarations: [
